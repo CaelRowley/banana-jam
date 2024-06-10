@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://2k03io2p7knr"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_f1c13"]
+
+[node name="Butt" type="Node3D"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.335671, 0, 0)
+mesh = SubResource("SphereMesh_f1c13")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.350268, 0, 0)
+mesh = SubResource("SphereMesh_f1c13")
