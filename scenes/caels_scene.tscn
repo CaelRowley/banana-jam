@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://c4gv8i0kn2gmf"]
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_hsev1"]
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_76r3b"]
+noise = SubResource("FastNoiseLite_hsev1")
+
+[node name="CaelsScene" type="Node2D"]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 1157.0
+offset_bottom = 649.0
+texture = SubResource("NoiseTexture2D_76r3b")
