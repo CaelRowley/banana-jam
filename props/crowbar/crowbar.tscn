@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://dddjihojyutgv"]
+
+[ext_resource type="PackedScene" uid="uid://c4kpkebu6ry24" path="res://props/crowbar/crowbar.glb" id="1_hlcqb"]
+
+[node name="Crowbar" instance=ExtResource("1_hlcqb")]
