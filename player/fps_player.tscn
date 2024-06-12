@@ -2,8 +2,8 @@
 
 [ext_resource type="Script" path="res://player/fps_player.gd" id="1_1uxkb"]
 [ext_resource type="Material" uid="uid://bm0dj14bfiq0y" path="res://player/materials/fps_player.tres" id="2_nxaij"]
+[ext_resource type="PackedScene" uid="uid://dvlypa2i1svd1" path="res://props/pickaxe/steampunk_pickaxe.tscn" id="3_5sbcc"]
 [ext_resource type="Script" path="res://player/reticle.gd" id="3_7nudu"]
-[ext_resource type="PackedScene" uid="uid://dddjihojyutgv" path="res://props/crowbar/crowbar.tscn" id="3_uk3xp"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_6tv51"]
 material = ExtResource("2_nxaij")
@@ -31,8 +31,8 @@ unique_name_in_owner = true
 
 [node name="WeaponRig" type="Node3D" parent="CameraController/Camera3D"]
 
-[node name="Crowbar" parent="CameraController/Camera3D/WeaponRig" instance=ExtResource("3_uk3xp")]
-transform = Transform3D(-0.992458, 0.100939, 0.0695509, 0.0955633, 0.992462, -0.076719, -0.0767706, -0.0694939, -0.994624, 0.215, -0.315, -0.33)
+[node name="SteampunkPickaxe" parent="CameraController/Camera3D/WeaponRig" instance=ExtResource("3_5sbcc")]
+transform = Transform3D(-0.107907, -0.0662891, -0.991949, 0.0955633, 0.992463, -0.076719, 0.989557, -0.103072, -0.100758, 0.215, -0.315, -0.372489)
 
 [node name="Control" type="Control" parent="."]
 layout_mode = 3
