@@ -1,7 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://c05a12gauducg"]
+[gd_scene load_steps=7 format=3 uid="uid://c05a12gauducg"]
 
 [ext_resource type="Script" path="res://player/fps_player.gd" id="1_1uxkb"]
 [ext_resource type="Material" uid="uid://bm0dj14bfiq0y" path="res://player/materials/fps_player.tres" id="2_nxaij"]
+[ext_resource type="PackedScene" uid="uid://c4kpkebu6ry24" path="res://props/crowbar/crowbar.glb" id="3_3ykgx"]
 [ext_resource type="Script" path="res://player/reticle.gd" id="3_7nudu"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_6tv51"]
@@ -14,6 +15,7 @@ script = ExtResource("1_1uxkb")
 
 [node name="PlaceholderMesh" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+visible = false
 mesh = SubResource("CapsuleMesh_6tv51")
 skeleton = NodePath("../CollisionShape3D")
 
@@ -27,6 +29,11 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
 [node name="Camera3D" type="Camera3D" parent="CameraController"]
 unique_name_in_owner = true
 
+[node name="WeaponRig" type="Node3D" parent="CameraController/Camera3D"]
+
+[node name="Crowbar" parent="CameraController/Camera3D/WeaponRig" instance=ExtResource("3_3ykgx")]
+transform = Transform3D(-0.992459, 0.100939, 0.0695509, 0.0955633, 0.992463, -0.076719, -0.0767706, -0.0694939, -0.994624, 0.215, -0.315, -0.33)
+
 [node name="Control" type="Control" parent="."]
 layout_mode = 3
 anchors_preset = 15
@@ -36,7 +43,7 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 1
 
-[node name="Reticle" type="CenterContainer" parent="Control"]
+[node name="Reticle" type="CenterContainer" parent="Control" node_paths=PackedStringArray("player_controller")]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -50,6 +57,7 @@ offset_bottom = 20.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("3_7nudu")
+player_controller = NodePath("../..")
 
 [node name="Top" type="Line2D" parent="Control/Reticle"]
 points = PackedVector2Array(0, -6, 0, -15)

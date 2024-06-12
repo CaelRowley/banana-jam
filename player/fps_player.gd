@@ -2,7 +2,7 @@ class_name Player
 extends CharacterBody3D
 
 @export var speed := 5.0
-@export var jump_velocity := 5.0
+@export var jump_velocity := 10.0
 @export var mouse_sensitivity := 0.5
 @export var tilt_lower_limit := -90.0
 @export var tilt_upper_limit := 90.0
@@ -37,6 +37,10 @@ func _physics_process(delta: float) -> void:
 		else:
 			velocity.x = move_toward(velocity.x, 0, speed)
 			velocity.z = move_toward(velocity.z, 0, speed)
+	else:
+		if direction:
+			velocity.x = move_toward(velocity.x, direction.x * speed, speed/10.0)
+			velocity.z = move_toward(velocity.z, direction.z * speed, speed/10.0)
 
 	move_and_slide()
 
