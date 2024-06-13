@@ -58,7 +58,7 @@ func _unhandled_input(event: InputEvent) -> void:
 		weapon_rig.load_weapon(load("res://props/weapons/pickaxe/pickaxe.tres"))
 	
 	if event.is_action_pressed("2"):
-		weapon_rig.load_weapon(load("res://props/weapons/pickaxe/pickaxe2.tres"))
+		weapon_rig.load_weapon(load("res://props/weapons/revolver/revolver.tres"))
 
 
 func _update_camera(delta: float) -> void:

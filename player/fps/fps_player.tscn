@@ -1,10 +1,11 @@
-[gd_scene load_steps=8 format=3 uid="uid://c05a12gauducg"]
+[gd_scene load_steps=9 format=3 uid="uid://c05a12gauducg"]
 
 [ext_resource type="Script" path="res://player/fps/fps_player.gd" id="1_1uxkb"]
 [ext_resource type="Material" uid="uid://bm0dj14bfiq0y" path="res://player/fps/materials/fps_player.tres" id="2_nxaij"]
 [ext_resource type="Script" path="res://player/fps/weapon_rig.gd" id="3_5oadn"]
 [ext_resource type="Script" path="res://player/fps/reticle.gd" id="3_7nudu"]
 [ext_resource type="Resource" uid="uid://vr3dswx3f7ng" path="res://props/weapons/pickaxe/pickaxe.tres" id="4_3lekc"]
+[ext_resource type="PackedScene" uid="uid://c56q2a1uhmydw" path="res://props/weapons/revolver/steampunk_handgun.glb" id="6_n1lcc"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_6tv51"]
 material = ExtResource("2_nxaij")
@@ -29,6 +30,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
 
 [node name="Camera3D" type="Camera3D" parent="CameraController"]
 unique_name_in_owner = true
+
+[node name="Sketchfab_Scene" parent="CameraController/Camera3D" instance=ExtResource("6_n1lcc")]
+transform = Transform3D(0.002, 0, 0, 0, 0.002, 0, 0, 0, 0.002, 0.214635, -1.8199, -0.499127)
 
 [node name="WeaponRig" type="Node3D" parent="CameraController/Camera3D"]
 unique_name_in_owner = true

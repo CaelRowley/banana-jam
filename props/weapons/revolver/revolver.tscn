@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://brgps67qv1ewu"]
+
+[ext_resource type="PackedScene" uid="uid://c56q2a1uhmydw" path="res://props/weapons/revolver/steampunk_handgun.glb" id="1_oj7hc"]
+
+[node name="Revolver" instance=ExtResource("1_oj7hc")]

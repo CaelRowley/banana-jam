@@ -29,6 +29,17 @@ animation/fps=30
 animation/trimming=false
 animation/remove_immutable_tracks=true
 import_script/path=""
-_subresources={}
+_subresources={
+"materials": {
+"pistol1": {
+"use_external/enabled": true,
+"use_external/path": "res://props/weapons/revolver/pistol1.tres"
+},
+"pistol2": {
+"use_external/enabled": true,
+"use_external/path": "res://props/weapons/revolver/pistol2.tres"
+}
+}
+}
 gltf/naming_version=1
 gltf/embedded_image_handling=1

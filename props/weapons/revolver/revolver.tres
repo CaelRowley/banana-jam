@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Weapon" load_steps=3 format=3 uid="uid://c85ohkmyen4t6"]
+
+[ext_resource type="Script" path="res://player/fps/weapon.gd" id="1_g7xhk"]
+[ext_resource type="PackedScene" uid="uid://brgps67qv1ewu" path="res://props/weapons/revolver/revolver.tscn" id="1_tjovk"]
+
+[resource]
+script = ExtResource("1_g7xhk")
+name = &""
+position = Vector3(0.13, -0.135, -0.389)
+rotation = Vector3(0, 0, 0)
+scale = Vector3(0.002, 0.002, 0.002)
+scene = ExtResource("1_tjovk")
