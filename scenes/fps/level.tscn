@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://scenes/fps/level.gd" id="1_13c3u"]
 [ext_resource type="Texture2D" uid="uid://b1jvh1ehiaebt" path="res://scenes/textures/industrial_sunset_puresky_4k.hdr" id="2_25wkj"]
-[ext_resource type="PackedScene" uid="uid://c05a12gauducg" path="res://player/fps_player.tscn" id="5_esrtv"]
+[ext_resource type="PackedScene" uid="uid://c05a12gauducg" path="res://player/fps/fps_player.tscn" id="5_esrtv"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_cmrwf"]
 panorama = ExtResource("2_25wkj")

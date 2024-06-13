@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Weapon" load_steps=3 format=3 uid="uid://vr3dswx3f7ng"]
+
+[ext_resource type="PackedScene" uid="uid://c4pmtgu6ku26e" path="res://props/weapons/pickaxe/pickaxe.tscn" id="1_meupu"]
+[ext_resource type="Script" path="res://player/fps/weapon.gd" id="1_qfwdh"]
+
+[resource]
+script = ExtResource("1_qfwdh")
+name = &"Pickaxe"
+position = Vector3(0.215, -0.315, -0.372)
+rotation = Vector3(4.4, -95.8, 5.5)
+scale = Vector3(1, 1, 1)
+scene = ExtResource("1_meupu")
